@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body,
+#container,
+#info,
+#profile,
+#share-container,
+#social {
+  display: flex; }
+
+body,
+#share-container,
+#social {
+  flex-direction: row; }
+
+#container,
+#info {
+  flex-direction: column; }
+
+body,
+#social,
+#share-container,
+#profile {
+  align-items: center; }
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background-color: #ecf2f8;
+  font-size: 13px;
+  min-width: 300px; }
+
+#container {
+  width: 90%;
+  max-width: 300px;
+  min-width: 300px;
+  border-radius: 15px;
+  margin: auto;
+  overflow: hidden; }
+  #container #drawers {
+    max-height: 170px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; }
+  #container #info {
+    padding: 2rem 1.5rem;
+    padding-bottom: 0;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 1.5rem;
+    position: relative;
+    height: 65%;
+    user-select: none; }
+    #container #info h1 {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #48556a; }
+    #container #info p {
+      font-weight: 500;
+      font-size: 0.8rem;
+      color: #6d7f97; }
+    #container #info #profile {
+      gap: 1rem;
+      padding: 1rem 0rem;
+      user-select: none; }
+      #container #info #profile p {
+        font-size: 0.8rem;
+        color: #48556a;
+        font-weight: 700; }
+      #container #info #profile span {
+        font-size: 0.8rem;
+        color: #6d7f97; }
+      #container #info #profile #avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%; }
+      #container #info #profile #share-container {
+        width: 33px;
+        height: 33px;
+        border-radius: 100%;
+        background-color: #ecf2f8;
+        justify-content: center;
+        padding: 0.5rem;
+        margin-left: auto;
+        z-index: 1;
+        cursor: pointer; }
+        #container #info #profile #share-container #share path {
+          fill: currentColor;
+          color: #48556a;
+          transition: color 0.5s ease; }
+      #container #info #profile #social {
+        background-color: #48556a;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        gap: 1rem;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+        padding: 1.5rem 2rem;
+        pointer-events: none; }
+        #container #info #profile #social p {
+          font-size: 0.7rem;
+          letter-spacing: 0.3rem;
+          color: #9eafc2; }
+        #container #info #profile #social img {
+          width: 20px;
+          height: 20px;
+          cursor: pointer; }
+
+.active {
+  opacity: 1 !important;
+  pointer-events: auto !important; }
+
+.active-share {
+  background-color: #6d7f97 !important; }
+
+img {
+  object-fit: cover;
+  width: 100%; }
+
+.active-link-share path {
+  color: #ecf2f8 !important; }
+
+@media screen and (min-width: 900px) {
+  #container {
+    width: 75%;
+    flex-direction: row;
+    max-width: 720px;
+    min-width: none;
+    overflow: visible; }
+    #container #drawers {
+      max-height: none;
+      width: 45%;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; }
+    #container #info {
+      width: 55%;
+      height: 100%;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 0px; }
+      #container #info h1 {
+        font-size: 1.2rem; }
+      #container #info p {
+        font-size: 0.8rem; }
+      #container #info #profile #social {
+        width: 65%;
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+        transform: translate(200px, -90px);
+        opacity: 0;
+        pointer-events: none; }
+        #container #info #profile #social img {
+          margin-left: auto;
+          gap: 0rem; } }
